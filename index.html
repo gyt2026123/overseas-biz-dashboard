@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>MAPTEC 海外业务合规看板</title>
+<style>
+  :root{
+    --bg:#f4f6fa; --panel:#ffffff; --ink:#1f2733; --sub:#6b7686; --line:#e6eaf0;
+    --green:#16a34a; --blue:#2563eb; --amber:#f59e0b; --gray:#d8dde6;
+    --shadow:0 1px 3px rgba(20,30,50,.06),0 8px 24px rgba(20,30,50,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  /* 密码门 */
+  #gate{position:fixed;inset:0;z-index:50;background:linear-gradient(135deg,#0f1f3d,#1b3a6b);
+    display:flex;align-items:center;justify-content:center}
+  #gate .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);
+    padding:36px 30px;border-radius:14px;width:320px;max-width:88vw;text-align:center;backdrop-filter:blur(6px)}
+  #gate h1{color:#fff;font-size:18px;margin:0 0 6px}
+  #gate p{color:#aebbd4;font-size:12px;margin:0 0 22px}
+  #gate input{width:100%;padding:11px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.08);color:#fff;font-size:14px;outline:none}
+  #gate input::placeholder{color:#8ea0c0}
+  #gate button{margin-top:14px;width:100%;padding:11px;border:0;border-radius:8px;cursor:pointer;
+    background:#3b82f6;color:#fff;font-size:14px;font-weight:600}
+  #gate .err{color:#ff9a9a;font-size:12px;min-height:16px;margin-top:10px}
+  /* 主体 */
+  #app{display:none;min-height:100vh}
+  header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:10}
+  header .t{display:flex;flex-direction:column}
+  header .t b{font-size:17px;letter-spacing:.5px}
+  header .t span{font-size:12px;color:var(--sub);margin-top:2px}
+  .sync{display:flex;align-items:center;gap:12px}
+  .sync .upd{font-size:12px;color:var(--sub)}
+  .sync button{padding:8px 16px;border:0;border-radius:8px;background:var(--ink);color:#fff;
+    font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .sync button:active{transform:scale(.98)}
+  .container{padding:18px 22px 40px;max-width:1400px;margin:0 auto}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .kpi .dot{position:absolute;left:0;top:0;bottom:0;width:4px}
+  .kpi .n{font-size:30px;font-weight:700;line-height:1}
+  .kpi .l{font-size:13px;color:var(--sub);margin-top:8px}
+  .kpi .s{font-size:12px;color:var(--sub);margin-top:2px}
+  .main{display:grid;grid-template-columns:1fr 320px;gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+  #map{width:100%;height:560px}
+  .side{padding:16px;display:flex;flex-direction:column;gap:14px}
+  .legend .row{display:flex;align-items:center;gap:9px;padding:7px 0;font-size:13px;cursor:pointer;user-select:none}
+  .legend .row.off{opacity:.35}
+  .legend .sw{width:14px;height:14px;border-radius:4px;flex:0 0 auto}
+  .legend .ct{margin-left:auto;color:var(--sub);font-variant-numeric:tabular-nums}
+  .side h3{margin:0 0 4px;font-size:13px;color:var(--sub);font-weight:600}
+  .filters input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;outline:none}
+  .filters select{width:100%;margin-top:8px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:16px}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--sub);font-weight:600;position:sticky;top:0;background:var(--panel)}
+  tbody tr:hover{background:#fafbfd}
+  .tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;
+    padding:10px 18px;border-radius:10px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:30}
+  .toast.show{opacity:1}
+  @media(max-width:980px){
+    .main{grid-template-columns:1fr}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    #map{height:420px}
+  }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <h1>MAPTEC 海外业务合规看板</h1>
+    <p>内部看板 · 请输入访问密码</p>
+    <input id="pw" type="password" placeholder="访问密码" autocomplete="off" />
+    <button id="pwBtn">进入</button>
+    <div class="err" id="pwErr"></div>
+  </div>
+</div>
+
+<div id="app">
+  <header>
+    <div class="t">
+      <b>MAPTEC 海外业务合规看板</b>
+      <span>实时同步 · 移动端适配 · 数据来源：腾讯文档智能表格</span>
+    </div>
+    <div class="sync">
+      <span class="upd" id="upd">加载中…</span>
+      <button id="syncBtn">↻ 同步</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="kpis" id="kpis"></div>
+    <div class="main">
+      <div class="card"><div id="map"></div></div>
+      <div class="side">
+        <div class="card" style="padding:14px">
+          <h3>业务状态（点击图例可筛选）</h3>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="card filters" style="padding:14px">
+          <h3>明细筛选</h3>
+          <input id="q" placeholder="搜索国家 / 负责人" />
+          <select id="fStatus">
+            <option value="">全部状态</option>
+            <option value="已合规上线">已合规上线</option>
+            <option value="合规洽谈中">合规洽谈中</option>
+            <option value="规划评估中">规划评估中</option>
+            <option value="暂未进入">暂未进入</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:6px 6px 2px;margin-top:16px">
+      <table>
+        <thead><tr><th>国家/地区</th><th>业务状态</th><th>负责人</th><th>更新时间</th><th>备注</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/echarts.min.js"></script>
+<script src="assets/topojson-client.min.js"></script>
+<script>
+// ===== 配置 =====
+// 演示密码，部署前请改成你自己的（这只是前端软门禁，挡外人用，不是真安全）
+const PASSCODE = "maptec2026";
+const STATUS = ["暂未进入","规划评估中","合规洽谈中","已合规上线"]; // 索引 0..3
+const COLOR  = {"暂未进入":"#d8dde6","规划评估中":"#f59e0b","合规洽谈中":"#2563eb","已合规上线":"#16a34a"};
+const idx = s => STATUS.indexOf(s) < 0 ? 0 : STATUS.indexOf(s);
+
+let geoReady = false, chart = null, DATA = [];
+
+// ===== 密码门 =====
+function unlock(){
+  const v = document.getElementById("pw").value;
+  if(v === PASSCODE){
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    boot();
+  } else {
+    document.getElementById("pwErr").textContent = "密码错误";
+  }
+}
+document.getElementById("pwBtn").onclick = unlock;
+document.getElementById("pw").addEventListener("keydown", e => { if(e.key==="Enter") unlock(); });
+
+// ===== 启动 =====
+async function boot(){
+  await loadGeo();
+  await refresh();
+  window.addEventListener("resize", () => chart && chart.resize());
+}
+
+// 加载合规世界底图（本地 TopoJSON -> GeoJSON）
+async function loadGeo(){
+  const topo = await fetch("assets/countries-50m.json").then(r => r.json());
+  const geo = topojson.feature(topo, topo.objects.countries);
+  echarts.registerMap("world", geo, {});
+  chart = echarts.init(document.getElementById("map"));
+  geoReady = true;
+}
+
+// 拉数据（带时间戳防缓存）
+async function refresh(){
+  try{
+    const rows = await fetch("data.json?t=" + Date.now()).then(r => r.json());
+    DATA = rows;
+    render(rows);
+    toast("已同步 · 共 " + rows.length + " 个国家/地区");
+    document.getElementById("upd").textContent = "最近同步：" + new Date().toLocaleString("zh-CN");
+  }catch(e){
+    toast("同步失败：" + e.message);
+  }
+}
+document.getElementById("syncBtn").onclick = refresh;
+
+// ===== 渲染 =====
+function render(rows){
+  renderKPI(rows);
+  renderMap(rows);
+  renderLegend(rows);
+  renderTable();
+}
+
+function renderKPI(rows){
+  const c = {}; STATUS.forEach(s => c[s]=0);
+  rows.forEach(r => c[r.status] = (c[r.status]||0)+1);
+  const html = STATUS.slice().reverse().map(s => `
+    <div class="kpi">
+      <div class="dot" style="background:${COLOR[s]}"></div>
+      <div class="n">${c[s]}</div>
+      <div class="l">${s}</div>
+      <div class="s">占 ${(c[s]/rows.length*100).toFixed(1)}%</div>
+    </div>`).join("");
+  document.getElementById("kpis").innerHTML = html;
+}
+
+function renderMap(rows){
+  const data = rows.map(r => ({ name:r.name, value:idx(r.status) }));
+  const pieces = STATUS.map((s,i)=>({ value:i, label:s, color:COLOR[s] }));
+  chart.setOption({
+    tooltip:{ trigger:"item", formatter:p=>{
+      const s = STATUS[p.value] || "暂未进入";
+      return `<b>${p.name}</b><br/>状态：${s}`;
+    }},
+    visualMap:{ show:false, type:"piecewise", pieces, min:0, max:3 },
+    series:[{
+      type:"map", map:"world", nameProperty:"name", roam:true,
+      itemStyle:{ borderColor:"#ffffff", borderWidth:.4, areaColor:"#eef1f6" },
+      emphasis:{ label:{show:false}, itemStyle:{ areaColor:"#c9d6ee" } },
+      data
+    }]
+  }, true);
+}
+
+let legendOff = {};
+function renderLegend(rows){
+  const c={}; STATUS.forEach(s=>c[s]=0); rows.forEach(r=>c[r.status]=(c[r.status]||0)+1);
+  document.getElementById("legend").innerHTML = STATUS.map(s=>`
+    <div class="row ${legendOff[s]?'off':''}" data-s="${s}">
+      <span class="sw" style="background:${COLOR[s]}"></span>
+      <span>${s}</span>
+      <span class="ct">${c[s]}</span>
+    </div>`).join("");
+  document.querySelectorAll("#legend .row").forEach(el=>{
+    el.onclick = () => {
+      const s = el.dataset.s;
+      legendOff[s] = !legendOff[s];
+      renderTable(); renderLegend(rows);
+    };
+  });
+}
+
+function renderTable(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const fs = document.getElementById("fStatus").value;
+  const hide = Object.keys(legendOff).filter(k=>legendOff[k]);
+  const rows = DATA.filter(r=>{
+    if(fs && r.status!==fs) return false;
+    if(hide.includes(r.status)) return false;
+    if(q && !(r.name.toLowerCase().includes(q) || (r.owner||"").toLowerCase().includes(q))) return false;
+    return true;
+  });
+  document.getElementById("tbody").innerHTML = rows.map(r=>`
+    <tr>
+      <td>${r.name}</td>
+      <td><span class="tag" style="background:${COLOR[r.status]}22;color:${COLOR[r.status]}">${r.status}</span></td>
+      <td>${r.owner||"—"}</td>
+      <td>${r.updated||"—"}</td>
+      <td>${r.note||"—"}</td>
+    </tr>`).join("") || `<tr><td colspan="5" style="color:var(--sub);text-align:center;padding:18px">无匹配数据</td></tr>`;
+}
+document.getElementById("q").oninput = renderTable;
+document.getElementById("fStatus").onchange = renderTable;
+
+// ===== 提示 =====
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), 2200);
+}
+</script>
+</body>
+</html>

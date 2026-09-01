@@ -1,0 +1,1689 @@
+[
+  {
+    "name": "Afghanistan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Albania",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Algeria",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "American Samoa",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Andorra",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Angola",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Anguilla",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Antarctica",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Antigua and Barb.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Argentina",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Armenia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Aruba",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Ashmore and Cartier Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Australia",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Austria",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Azerbaijan",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Bahamas",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bahrain",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bangladesh",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Barbados",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Belarus",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Belgium",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Belize",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Benin",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bermuda",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bhutan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bolivia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Bosnia and Herz.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Botswana",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Br. Indian Ocean Ter.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Brazil",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "British Virgin Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Brunei",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Bulgaria",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Burkina Faso",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Burundi",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Cabo Verde",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Cambodia",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Cameroon",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Canada",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Cayman Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Central African Rep.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Chad",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Chile",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "China",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Colombia",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Comoros",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Congo",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Cook Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Costa Rica",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Croatia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Cuba",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Curaçao",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Cyprus",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Czechia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Dem. Rep. Congo",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Denmark",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Djibouti",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Dominica",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Dominican Rep.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Ecuador",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Egypt",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "El Salvador",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Eq. Guinea",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Eritrea",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Estonia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Ethiopia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Faeroe Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Falkland Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Fiji",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Finland",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Fr. Polynesia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Fr. S. Antarctic Lands",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "France",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Gabon",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Gambia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Georgia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Germany",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Ghana",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Greece",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Greenland",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Grenada",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Guam",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Guatemala",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Guernsey",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Guinea",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Guyana",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Haiti",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Heard I. and McDonald Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Honduras",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Hong Kong",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Hungary",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Iceland",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "India",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Indian Ocean Ter.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Indonesia",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Iran",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Iraq",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Ireland",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Isle of Man",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Israel",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Italy",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Jamaica",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Japan",
+    "status": "合规洽谈中",
+    "owner": "亚太区团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Jersey",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Jordan",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Kazakhstan",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Kenya",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Kiribati",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Kosovo",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Kuwait",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Laos",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Latvia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Lebanon",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Lesotho",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Liberia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Libya",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Liechtenstein",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Lithuania",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Luxembourg",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Macao",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Macedonia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Madagascar",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Malawi",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Malaysia",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Maldives",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Mali",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Malta",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Marshall Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Mauritania",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Mauritius",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Mexico",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Micronesia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Moldova",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Monaco",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Mongolia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Montenegro",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Montserrat",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Morocco",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Mozambique",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Myanmar",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "N. Cyprus",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "N. Mariana Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Namibia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Nauru",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Nepal",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Netherlands",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "New Caledonia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "New Zealand",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Nicaragua",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Niger",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Nigeria",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Niue",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Norfolk Island",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "North Korea",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Norway",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Oman",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Pakistan",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Palau",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Palestine",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Panama",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Papua New Guinea",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Paraguay",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Peru",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Philippines",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Pitcairn Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Poland",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Portugal",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Puerto Rico",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Qatar",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Romania",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Russia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Rwanda",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "S. Geo. and the Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "S. Sudan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Saint Helena",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Saint Lucia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Samoa",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "San Marino",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Saudi Arabia",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Senegal",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Serbia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Seychelles",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Siachen Glacier",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Sierra Leone",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Singapore",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Sint Maarten",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Slovakia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Slovenia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Solomon Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Somalia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Somaliland",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "South Africa",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "South Korea",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Spain",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Sri Lanka",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "St-Barthélemy",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "St-Martin",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "St. Kitts and Nevis",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "St. Pierre and Miquelon",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "St. Vin. and Gren.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Sudan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Suriname",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Sweden",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Switzerland",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Syria",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "São Tomé and Principe",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Taiwan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Tajikistan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Tanzania",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Thailand",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "Timor-Leste",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Togo",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Tonga",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Tunisia",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Turkey",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Turkmenistan",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Turks and Caicos Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "U.S. Virgin Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Uganda",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Ukraine",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "United Arab Emirates",
+    "status": "已合规上线",
+    "owner": "区域运营团队",
+    "updated": "2026-08-27",
+    "note": "已落地运营，合规就绪"
+  },
+  {
+    "name": "United Kingdom",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "United States of America",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "Uruguay",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Uzbekistan",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Vanuatu",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Vatican",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Venezuela",
+    "status": "规划评估中",
+    "owner": "战略评估组",
+    "updated": "2026-07-03",
+    "note": "市场与合规评估"
+  },
+  {
+    "name": "Vietnam",
+    "status": "合规洽谈中",
+    "owner": "商务拓展团队",
+    "updated": "2026-08-12",
+    "note": "客户接洽/协议推进中"
+  },
+  {
+    "name": "W. Sahara",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Wallis and Futuna Is.",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Yemen",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Zambia",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Zimbabwe",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "eSwatini",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  },
+  {
+    "name": "Åland",
+    "status": "暂未进入",
+    "owner": "",
+    "updated": "-",
+    "note": "暂未进入"
+  }
+]
