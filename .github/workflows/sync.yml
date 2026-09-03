@@ -1,0 +1,51 @@
+name: Sync Tencent Docs → data.json
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # 每 15 分钟自动同步一次
+  workflow_dispatch:        # 也支持在 Actions 页面手动点「Run workflow」立即同步
+
+permissions:
+  contents: write            # 允许提交 data.json 回仓库（用默认 GITHUB_TOKEN，无需额外 PAT）
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install mcporter
+        run: |
+          npm install -g mcporter@0.8.1
+          echo "$(npm prefix -g)/bin" >> "$GITHUB_PATH"
+
+      - name: Register tencent-docs MCP
+        run: |
+          mcporter config add tencent-docs https://docs.qq.com/openapi/mcp \
+            --header "Authorization=${{ secrets.TDOC_TOKEN }}" \
+            --transport http --scope home
+
+      - name: Run sync
+        env:
+          TDOC_FILE_ID: ${{ secrets.TDOC_FILE_ID }}
+          TDOC_SHEET_ID: ${{ secrets.TDOC_SHEET_ID }}
+        run: node sync.js
+
+      - name: Commit data.json
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "sync-bot@users.noreply.github.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "无变更，跳过提交"
+          else
+            git commit -m "auto: sync data.json from Tencent Docs"
+            git push
+          fi
