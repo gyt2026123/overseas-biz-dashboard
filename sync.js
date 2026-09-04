@@ -30,19 +30,37 @@ const OUT = process.env.TDOC_OUT || path.join(__dirname, 'data.json');
 const VALID_STATUS = ['已合规上线', '合规洽谈中', '规划评估中', '暂未进入'];
 
 // ── 调用 mcporter（不进 shell，直接传参，避免转义问题）────────────────────
+// 腾讯文档 API 偶发抖动/限流时自动重试，避免一次瞬时失败就让整个 workflow 挂掉
 function mcpCall(tool, args) {
-  const r = spawnSync(MCP, ['call', 'tencent-docs', tool, '--args', JSON.stringify(args)], {
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'pipe'],
-  });
-  if (r.error) throw new Error(`调用 mcporter 失败: ${r.error.message}`);
-  const out = (r.stdout || '').trim();
-  if (!out) throw new Error(`mcporter 返回为空 (${tool})，stderr: ${(r.stderr || '').slice(0, 300)}`);
-  try {
-    return JSON.parse(out);
-  } catch (e) {
-    throw new Error(`解析 mcporter 输出失败: ${e.message}\n原始输出: ${out.slice(0, 300)}`);
+  const MAX = 3, RETRY_MS = 3000;
+  let lastErr = '';
+  for (let attempt = 1; attempt <= MAX; attempt++) {
+    let r;
+    try {
+      r = spawnSync(MCP, ['call', 'tencent-docs', tool, '--args', JSON.stringify(args)], {
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'pipe'],
+        timeout: 60000,
+      });
+    } catch (e) {
+      r = { error: e };
+    }
+    if (r.error) { lastErr = `调用 mcporter 失败: ${r.error.message}`; }
+    else {
+      const out = (r.stdout || '').trim();
+      if (!out) { lastErr = `mcporter 返回为空，stderr: ${(r.stderr || '').slice(0, 300)}`; }
+      else {
+        try { return JSON.parse(out); }
+        catch (e) { lastErr = `解析 mcporter 输出失败: ${e.message}`; }
+      }
+    }
+    if (attempt < MAX) {
+      console.log(`[sync][重试 ${attempt}/${MAX}] ${tool} 失败：${lastErr}（${RETRY_MS}ms 后重试）`);
+      const buf = new Int32Array(new SharedArrayBuffer(4));
+      Atomics.wait(buf, 0, 0, RETRY_MS);
+    }
   }
+  throw new Error(`调用 ${tool} 失败（已重试 ${MAX} 次）：${lastErr}`);
 }
 
 // ── 从 oneof 值字段里取出纯文本 ────────────────────────────────────────────
