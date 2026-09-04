@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>MAPTEC 海外业务合规看板</title>
+<title>海外业务合规准备情况可视化地图</title>
 <style>
   :root{
-    --bg:#f4f6fa; --panel:#ffffff; --ink:#1f2733; --sub:#6b7686; --line:#e6eaf0;
-    --green:#16a34a; --blue:#2563eb; --amber:#f59e0b; --gray:#d8dde6;
-    --shadow:0 1px 3px rgba(20,30,50,.06),0 8px 24px rgba(20,30,50,.05);
+    --bg:#eef1f6; --panel:#ffffff; --ink:#1f2a37; --sub:#6b7686; --line:#e7ebf1;
+    --brand:#2f6bff; --brand-soft:#eaf0ff;
+    --green:#16a34a; --blue:#2563eb; --amber:#f59e0b; --gray:#cbd5e1;
+    --shadow:0 1px 2px rgba(20,30,50,.05),0 6px 20px rgba(20,30,50,.06);
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
@@ -29,46 +30,63 @@
   #gate .err{color:#ff9a9a;font-size:12px;min-height:16px;margin-top:10px}
   /* 主体 */
   #app{display:none;min-height:100vh}
-  header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
-    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:10}
-  header .t{display:flex;flex-direction:column}
-  header .t b{font-size:17px;letter-spacing:.5px}
-  header .t span{font-size:12px;color:var(--sub);margin-top:2px}
-  .sync{display:flex;align-items:center;gap:12px}
+  header.top{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 26px;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:20}
+  header.top .brand{display:flex;align-items:center;gap:12px}
+  header.top .logo{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+  header.top .t b{font-size:18px;letter-spacing:.5px}
+  header.top .t span{display:block;font-size:12px;color:var(--sub);margin-top:2px}
+  .sync{display:flex;align-items:center;gap:14px}
   .sync .upd{font-size:12px;color:var(--sub)}
-  .sync button{padding:8px 16px;border:0;border-radius:8px;background:var(--ink);color:#fff;
-    font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .sync button{padding:9px 18px;border:0;border-radius:9px;background:var(--brand);color:#fff;
+    font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px}
   .sync button:active{transform:scale(.98)}
-  .container{padding:18px 22px 40px;max-width:1400px;margin:0 auto}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
-  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  .kpi .dot{position:absolute;left:0;top:0;bottom:0;width:4px}
-  .kpi .n{font-size:30px;font-weight:700;line-height:1}
-  .kpi .l{font-size:13px;color:var(--sub);margin-top:8px}
-  .kpi .s{font-size:12px;color:var(--sub);margin-top:2px}
-  .main{display:grid;grid-template-columns:1fr 320px;gap:16px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-  #map{width:100%;height:560px}
-  .side{padding:16px;display:flex;flex-direction:column;gap:14px}
-  .legend .row{display:flex;align-items:center;gap:9px;padding:7px 0;font-size:13px;cursor:pointer;user-select:none}
-  .legend .row.off{opacity:.35}
-  .legend .sw{width:14px;height:14px;border-radius:4px;flex:0 0 auto}
-  .legend .ct{margin-left:auto;color:var(--sub);font-variant-numeric:tabular-nums}
-  .side h3{margin:0 0 4px;font-size:13px;color:var(--sub);font-weight:600}
-  .filters input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;outline:none}
-  .filters select{width:100%;margin-top:8px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff}
-  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:16px}
-  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
-  th{color:var(--sub);font-weight:600;position:sticky;top:0;background:var(--panel)}
-  tbody tr:hover{background:#fafbfd}
-  .tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
-  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;
-    padding:10px 18px;border-radius:10px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:30}
+  .container{padding:20px 26px 44px;max-width:1480px;margin:0 auto}
+  /* KPI 面板 */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px}
+  .kpi .bar{position:absolute;left:0;top:0;bottom:0;width:5px}
+  .kpi .l{font-size:13px;color:var(--sub);font-weight:600}
+  .kpi .n{font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+  .kpi .s{font-size:12px;color:var(--sub)}
+  .kpi .pct{margin-left:auto;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+  /* 主区 */
+  .main{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-bottom:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+  .card .hd{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+  .card .hd h2{margin:0;font-size:15px;font-weight:700}
+  .card .hd .sub{font-size:12px;color:var(--sub)}
+  #map{width:100%;height:600px}
+  .side{display:flex;flex-direction:column;gap:16px}
+  .legend .row{display:flex;align-items:center;gap:10px;padding:9px 4px;font-size:13px;cursor:pointer;user-select:none;border-radius:8px}
+  .legend .row:hover{background:#f7f9fc}
+  .legend .row.off{opacity:.38}
+  .legend .sw{width:13px;height:13px;border-radius:4px;flex:0 0 auto}
+  .legend .ct{margin-left:auto;color:var(--sub);font-variant-numeric:tabular-nums;font-weight:600}
+  .filters .grp{margin-bottom:12px}
+  .filters label{display:block;font-size:12px;color:var(--sub);margin-bottom:5px;font-weight:600}
+  .filters input,.filters select{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:9px;font-size:13px;outline:none;background:#fff}
+  .filters input:focus,.filters select:focus{border-color:var(--brand)}
+  /* 表格 */
+  .tblwrap{padding:6px 6px 2px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+  th{color:var(--sub);font-weight:600;position:sticky;top:0;background:var(--panel);white-space:nowrap}
+  tbody tr:hover{background:#f8fafc}
+  .tag{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;font-weight:700}
+  .prog{display:flex;align-items:center;gap:8px;min-width:120px}
+  .prog .track{flex:1;height:7px;border-radius:999px;background:#eef1f6;overflow:hidden}
+  .prog .fill{height:100%;border-radius:999px}
+  .prog .v{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums;width:34px;text-align:right}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;
+    padding:11px 20px;border-radius:11px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:40}
   .toast.show{opacity:1}
-  @media(max-width:980px){
+  @media(max-width:1040px){
     .main{grid-template-columns:1fr}
     .kpis{grid-template-columns:repeat(2,1fr)}
-    #map{height:420px}
+    #map{height:440px}
   }
 </style>
 </head>
@@ -76,7 +94,7 @@
 
 <div id="gate">
   <div class="box">
-    <h1>MAPTEC 海外业务合规看板</h1>
+    <h1>海外业务合规看板</h1>
     <p>内部看板 · 请输入访问密码</p>
     <input id="pw" type="password" placeholder="访问密码" autocomplete="off" />
     <button id="pwBtn">进入</button>
@@ -85,10 +103,13 @@
 </div>
 
 <div id="app">
-  <header>
-    <div class="t">
-      <b>MAPTEC 海外业务合规看板</b>
-      <span>实时同步 · 移动端适配 · 数据来源：腾讯文档智能表格</span>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">M</div>
+      <div class="t">
+        <b>海外业务合规准备情况可视化地图</b>
+        <span>数据来源：腾讯文档智能表格 · 实时同步</span>
+      </div>
     </div>
     <div class="sync">
       <span class="upd" id="upd">加载中…</span>
@@ -98,32 +119,47 @@
 
   <div class="container">
     <div class="kpis" id="kpis"></div>
+
     <div class="main">
-      <div class="card"><div id="map"></div></div>
+      <div class="card">
+        <div class="hd"><h2>全球合规分布</h2><span class="sub">点击图例可筛选状态</span></div>
+        <div id="map"></div>
+      </div>
       <div class="side">
-        <div class="card" style="padding:14px">
-          <h3>业务状态（点击图例可筛选）</h3>
-          <div class="legend" id="legend"></div>
+        <div class="card">
+          <div class="hd"><h2>状态分布</h2></div>
+          <div class="legend" id="legend" style="padding:10px 18px 14px"></div>
         </div>
-        <div class="card filters" style="padding:14px">
-          <h3>明细筛选</h3>
-          <input id="q" placeholder="搜索国家 / 负责人" />
-          <select id="fStatus">
-            <option value="">全部状态</option>
-            <option value="已合规上线">已合规上线</option>
-            <option value="合规洽谈中">合规洽谈中</option>
-            <option value="规划评估中">规划评估中</option>
-            <option value="暂未进入">暂未进入</option>
-          </select>
+        <div class="card filters" style="padding:16px 18px">
+          <div class="hd" style="padding:0 0 12px;border:0"><h2>明细筛选</h2></div>
+          <div class="grp">
+            <label>搜索国家 / 对接方</label>
+            <input id="q" placeholder="输入关键字" />
+          </div>
+          <div class="grp">
+            <label>业务状态</label>
+            <select id="fStatus">
+              <option value="">全部状态</option>
+              <option value="已合规上线">已合规上线</option>
+              <option value="合规洽谈中">合规洽谈中</option>
+              <option value="规划评估中">规划评估中</option>
+              <option value="暂未进入">暂未进入</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" style="padding:6px 6px 2px;margin-top:16px">
-      <table>
-        <thead><tr><th>国家/地区</th><th>业务状态</th><th>负责人</th><th>更新时间</th><th>备注</th></tr></thead>
-        <tbody id="tbody"></tbody>
-      </table>
+    <div class="card">
+      <div class="hd"><h2>海外业务合规明细</h2><span class="sub" id="tblCount"></span></div>
+      <div class="tblwrap">
+        <table>
+          <thead><tr>
+            <th>国家/地区</th><th>合规准备情况</th><th>进度</th><th>对接方</th><th>更新时间</th><th>备注</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
@@ -132,20 +168,21 @@
 
 <script src="assets/echarts.min.js"></script>
 <script src="assets/topojson-client.min.js"></script>
+<script src="assets/country-zh.js"></script>
 <script>
 // ===== 配置 =====
-// 演示密码，部署前请改成你自己的（这只是前端软门禁，挡外人用，不是真安全）
-const PASSCODE = "maptec2026";
+const PASSCODE = "maptec2026";  // 演示软门禁，部署前请自行修改
 const STATUS = ["暂未进入","规划评估中","合规洽谈中","已合规上线"]; // 索引 0..3
-const COLOR  = {"暂未进入":"#d8dde6","规划评估中":"#f59e0b","合规洽谈中":"#2563eb","已合规上线":"#16a34a"};
+const COLOR  = {"暂未进入":"#cbd5e1","规划评估中":"#f59e0b","合规洽谈中":"#2563eb","已合规上线":"#16a34a"};
+const PROGRESS = {"暂未进入":8,"规划评估中":40,"合规洽谈中":72,"已合规上线":100};
 const idx = s => STATUS.indexOf(s) < 0 ? 0 : STATUS.indexOf(s);
+const zh = n => (window.COUNTRY_ZH && window.COUNTRY_ZH[n]) || n;
 
-let geoReady = false, chart = null, DATA = [];
+let chart = null, DATA = [], legendOff = {};
 
 // ===== 密码门 =====
 function unlock(){
-  const v = document.getElementById("pw").value;
-  if(v === PASSCODE){
+  if(document.getElementById("pw").value === PASSCODE){
     document.getElementById("gate").style.display = "none";
     document.getElementById("app").style.display = "block";
     boot();
@@ -162,14 +199,11 @@ async function boot(){
   await refresh();
   window.addEventListener("resize", () => chart && chart.resize());
 }
-
-// 加载合规世界底图（本地 TopoJSON -> GeoJSON）
 async function loadGeo(){
   const topo = await fetch("assets/countries-50m.json").then(r => r.json());
   const geo = topojson.feature(topo, topo.objects.countries);
   echarts.registerMap("world", geo, {});
   chart = echarts.init(document.getElementById("map"));
-  geoReady = true;
 }
 
 // 拉数据（带时间戳防缓存）
@@ -180,9 +214,7 @@ async function refresh(){
     render(rows);
     toast("已同步 · 共 " + rows.length + " 个国家/地区");
     document.getElementById("upd").textContent = "最近同步：" + new Date().toLocaleString("zh-CN");
-  }catch(e){
-    toast("同步失败：" + e.message);
-  }
+  }catch(e){ toast("同步失败：" + e.message); }
 }
 document.getElementById("syncBtn").onclick = refresh;
 
@@ -197,14 +229,13 @@ function render(rows){
 function renderKPI(rows){
   const c = {}; STATUS.forEach(s => c[s]=0);
   rows.forEach(r => c[r.status] = (c[r.status]||0)+1);
-  const html = STATUS.slice().reverse().map(s => `
+  document.getElementById("kpis").innerHTML = STATUS.slice().reverse().map(s => `
     <div class="kpi">
-      <div class="dot" style="background:${COLOR[s]}"></div>
-      <div class="n">${c[s]}</div>
+      <div class="bar" style="background:${COLOR[s]}"></div>
       <div class="l">${s}</div>
-      <div class="s">占 ${(c[s]/rows.length*100).toFixed(1)}%</div>
+      <div class="n" style="color:${COLOR[s]}">${c[s]}</div>
+      <div class="s">占 ${(c[s]/rows.length*100).toFixed(1)}% · 共 ${rows.length} 国</div>
     </div>`).join("");
-  document.getElementById("kpis").innerHTML = html;
 }
 
 function renderMap(rows){
@@ -212,20 +243,22 @@ function renderMap(rows){
   const pieces = STATUS.map((s,i)=>({ value:i, label:s, color:COLOR[s] }));
   chart.setOption({
     tooltip:{ trigger:"item", formatter:p=>{
-      const s = STATUS[p.value] || "暂未进入";
-      return `<b>${p.name}</b><br/>状态：${s}`;
+      const r = p.data || {};
+      const s = STATUS[r.value] || "暂未进入";
+      return `<b>${zh(r.name||p.name)}</b><br/>合规准备情况：${s}` +
+             (r.owner?`<br/>对接方：${r.owner}`:"");
     }},
     visualMap:{ show:false, type:"piecewise", pieces, min:0, max:3 },
     series:[{
       type:"map", map:"world", nameProperty:"name", roam:true,
       itemStyle:{ borderColor:"#ffffff", borderWidth:.4, areaColor:"#eef1f6" },
-      emphasis:{ label:{show:false}, itemStyle:{ areaColor:"#c9d6ee" } },
+      emphasis:{ label:{show:true, color:"#1f2a37", fontSize:11}, itemStyle:{ areaColor:"#c9d6ee" } },
+      label:{ show:false },
       data
     }]
   }, true);
 }
 
-let legendOff = {};
 function renderLegend(rows){
   const c={}; STATUS.forEach(s=>c[s]=0); rows.forEach(r=>c[r.status]=(c[r.status]||0)+1);
   document.getElementById("legend").innerHTML = STATUS.map(s=>`
@@ -235,11 +268,7 @@ function renderLegend(rows){
       <span class="ct">${c[s]}</span>
     </div>`).join("");
   document.querySelectorAll("#legend .row").forEach(el=>{
-    el.onclick = () => {
-      const s = el.dataset.s;
-      legendOff[s] = !legendOff[s];
-      renderTable(); renderLegend(rows);
-    };
+    el.onclick = () => { const s = el.dataset.s; legendOff[s] = !legendOff[s]; renderTable(); renderLegend(rows); };
   });
 }
 
@@ -250,17 +279,21 @@ function renderTable(){
   const rows = DATA.filter(r=>{
     if(fs && r.status!==fs) return false;
     if(hide.includes(r.status)) return false;
-    if(q && !(r.name.toLowerCase().includes(q) || (r.owner||"").toLowerCase().includes(q))) return false;
+    if(q && !(zh(r.name).toLowerCase().includes(q) || (r.owner||"").toLowerCase().includes(q))) return false;
     return true;
   });
-  document.getElementById("tbody").innerHTML = rows.map(r=>`
-    <tr>
-      <td>${r.name}</td>
+  document.getElementById("tblCount").textContent = "共 " + rows.length + " 条";
+  document.getElementById("tbody").innerHTML = rows.map(r=>{
+    const p = PROGRESS[r.status] || 0;
+    return `<tr>
+      <td>${zh(r.name)}</td>
       <td><span class="tag" style="background:${COLOR[r.status]}22;color:${COLOR[r.status]}">${r.status}</span></td>
+      <td><div class="prog"><div class="track"><div class="fill" style="width:${p}%;background:${COLOR[r.status]}"></div></div><span class="v">${p}%</span></div></td>
       <td>${r.owner||"—"}</td>
       <td>${r.updated||"—"}</td>
       <td>${r.note||"—"}</td>
-    </tr>`).join("") || `<tr><td colspan="5" style="color:var(--sub);text-align:center;padding:18px">无匹配数据</td></tr>`;
+    </tr>`;
+  }).join("") || `<tr><td colspan="6" style="color:var(--sub);text-align:center;padding:20px">无匹配数据</td></tr>`;
 }
 document.getElementById("q").oninput = renderTable;
 document.getElementById("fStatus").onchange = renderTable;
